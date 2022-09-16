@@ -13,6 +13,16 @@
   ],
   "author": "",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
@@ -21,6 +31,13 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
+    "husky": "^8.0.1",
     "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/puppeteer": "^5.4.6",
+    "cheerio": "^1.0.0-rc.12",
+    "puppeteer": "^17.1.3"
   }
 }
