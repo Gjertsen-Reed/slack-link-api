@@ -27,7 +27,7 @@ module.exports = {
     'func-style': [2, 'expression'],
     'no-var': 2,
     'prefer-const': 2,
-    'semi': 2,
+    'semi': 1,
     'no-extra-semi': 2,
     'brace-style': [2, '1tbs', { 'allowSingleLine': true }],
     'semi-spacing': 1,

@@ -2,16 +2,22 @@
   "name": "slack-linkedin",
   "version": "1.0.0",
   "description": "automates connecting on linkedin with members of a mutual slack channel",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .ts",
-    "prepare": "husky install"
-  },
+  "main": "src/index.js",
+  "author": "",
+  "license": "ISC",
   "keywords": [
     "slack",
     "linkedin"
   ],
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -22,9 +28,9 @@
       "eslint"
     ]
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@types/cheerio": "^0.22.31",
+    "@types/puppeteer": "^5.4.6",
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "eslint": "^8.23.1",
@@ -36,9 +42,11 @@
     "typescript": "^4.8.3"
   },
   "dependencies": {
-    "@types/cheerio": "^0.22.31",
-    "@types/puppeteer": "^5.4.6",
     "cheerio": "^1.0.0-rc.12",
-    "puppeteer": "^17.1.3"
+    "dotenv": "^16.0.2",
+    "puppeteer": "^17.1.3",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-adblocker": "^2.13.5",
+    "puppeteer-extra-plugin-stealth": "^2.11.1"
   }
 }
