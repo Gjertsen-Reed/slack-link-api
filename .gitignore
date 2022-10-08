@@ -2,3 +2,5 @@ node_modules
 dist
 .vscode
 .env
+workspaces.txt
+users.json
